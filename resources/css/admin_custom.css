@@ -1,0 +1,77 @@
+/* Estilo súper vistoso para MENU */
+.vibrant-menu-header {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.7);
+
+    background: linear-gradient(45deg,
+        #ff0000, #ff7300, #fffb00, #48ff00,
+        #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background-size: 400% 400%;
+
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: gradient-animation 10s ease infinite;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.vibrant-menu-header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: -1;
+}
+
+@keyframes gradient-animation {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+
+
+/* resources/css/admin_custom.css */
+.gradient-header {
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+    color: white !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.gradient-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.gradient-header:hover::before {
+    left: 100%;
+}
